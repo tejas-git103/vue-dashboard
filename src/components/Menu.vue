@@ -65,6 +65,7 @@ export default {
     font-size: 25px;
     font-weight: bold;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .menu-list{

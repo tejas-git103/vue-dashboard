@@ -18,11 +18,98 @@
       <div class="tree-root">
           <img class="img-root" src="../assets/tree/root.png">
       </div>
+		<div class="connector-container-one">
+			<span class="vertical-connector-one"></span>
+			<span class="horizontal-conncetor-one"></span>
+			<div class="child-connector-one">
+				<span class="vertical-connector-one"></span>
+				<span class="vertical-connector-one"></span> 
+			</div>
+		</div>
       <div class="tree-children">
           <img class="child invert" src="../assets/tree/active.png">
           <img class="child" src="../assets/tree/active.png">
       </div>
+		<div class="row-two-connector">
+			<div class="connector-container-two">
+				<span class="vertical-connector-two"></span>
+				<span class="horizontal-conncetor-two"></span>
+				<div class="child-connector-two">
+					<span class="vertical-connector-two"></span>
+					<span class="vertical-connector-two"></span> 
+				</div>
+			</div>
+			<div style="width:350px"></div>
+			<div class="connector-container-two">
+				<span class="vertical-connector-two"></span>
+				<span class="horizontal-conncetor-two"></span>
+				<div class="child-connector-two">
+					<span class="vertical-connector-two"></span>
+					<span class="vertical-connector-two"></span> 
+				</div>
+			</div>
+		</div>
+    <div class="tree-row-two">
+		<div class="row-two-node">
+			<img class="row-two-img" src="../assets/tree/purple.png">
+			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
+		</div>
+		<div class="row-two-node">
+			<img class="row-two-img" src="../assets/tree/purple.png">
+			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
+		</div><div class="row-two-node">
+			<img class="row-two-img" src="../assets/tree/purple.png">
+			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
+		</div><div class="row-two-node">
+			<img class="row-two-img" src="../assets/tree/purple.png">
+			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
+		</div>
+    </div>
+	<div class="row-three-connectors">
+		<div class="connector-container-three">
+				<span class="vertical-connector-three"></span>
+				<span class="horizontal-conncetor-three"></span>
+				<div class="child-connector-three">
+					<span class="vertical-connector-three"></span>
+					<span class="vertical-connector-three"></span> 
+				</div>
+		</div>
+		<div class="connector-container-three">
+				<span class="vertical-connector-three"></span>
+				<span class="horizontal-conncetor-three"></span>
+				<div class="child-connector-three">
+					<span class="vertical-connector-three"></span>
+					<span class="vertical-connector-three"></span> 
+				</div>
+		</div>
+		<div class="connector-container-three">
+				<span class="vertical-connector-three"></span>
+				<span class="horizontal-conncetor-three"></span>
+				<div class="child-connector-three">
+					<span class="vertical-connector-three"></span>
+					<span class="vertical-connector-three"></span> 
+				</div>
+		</div>
+		<div class="connector-container-three">
+				<span class="vertical-connector-three"></span>
+				<span class="horizontal-conncetor-three"></span>
+				<div class="child-connector-three">
+					<span class="vertical-connector-three"></span>
+					<span class="vertical-connector-three"></span> 
+				</div>
+		</div>
 
+	</div>
+	<div class="tree-row-three">
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+		<img class="row-three-img" src="../assets/tree/purple_text.png" >
+	</div>
   </div>
 </template>
 
@@ -115,6 +202,104 @@ export default {
     /* height: 100px; */
 }
 .invert{
-    transform: rotate(180deg)
+    transform: rotate(180deg);
+}
+
+.tree-row-two{
+	display: flex;
+	flex-direction: row;
+	/* padding-top: 80px;	 */
+	justify-content: space-evenly;
+}
+
+.row-two-img{
+	height: 80px;
+	width: 80px;
+}
+.row-two-node{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tree-row-three{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	/* padding-top: 50px; */
+}
+
+.row-three-img{
+	height: 50px;
+	/* width: 50px; */
+}
+.connector-container-one{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.child-connector-one{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width:700px;
+}
+.vertical-connector-one{
+	border-left:1px grey solid ;
+	height: 40px;
+}
+.horizontal-conncetor-one{
+	border-bottom: 1px gray solid;
+	width: 700px;
+}
+.row-two-connector{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.connector-container-two{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.child-connector-two{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width:350px;
+}
+.vertical-connector-two{
+	border-left:1px grey solid ;
+	height: 40px;
+}
+.horizontal-conncetor-two{
+	border-bottom: 1px gray solid;
+	width: 350px;
+}
+
+.row-three-connectors{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.connector-container-three{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.child-connector-three{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width:200px;
+}
+.vertical-connector-three{
+	border-left:1px grey solid ;
+	height: 40px;
+}
+.horizontal-conncetor-three{
+	border-bottom: 1px gray solid;
+	width: 200px;
 }
 </style>

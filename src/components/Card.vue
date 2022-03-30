@@ -64,5 +64,6 @@ export default {
 .text-value{
     color: #2A3141;
     font-size: 31px;
+    font-weight: bold;
 }
 </style>
