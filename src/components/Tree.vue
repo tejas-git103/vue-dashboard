@@ -1,5 +1,8 @@
 <template>
   <div class="tree-container">
+		<div class="hover-img-container" ref="hoverImgRef">
+			<img class="hover-img"  src="../assets/tree/hover_img.png">
+		</div>
       <div class="heading-bar">
           <div class="title">
               Tree
@@ -50,17 +53,19 @@
 			</div>
 		</div>
     <div class="tree-row-two">
-		<div class="row-two-node">
+		<div class="row-two-node" @click="handleClick">
+			<img class="row-two-img"  src="../assets/tree/purple.png">
+			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
+		</div>
+		<div class="row-two-node" @click="handleClick">
 			<img class="row-two-img" src="../assets/tree/purple.png">
 			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
 		</div>
-		<div class="row-two-node">
+		<div class="row-two-node" @click="handleClick" >
 			<img class="row-two-img" src="../assets/tree/purple.png">
 			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
-		</div><div class="row-two-node">
-			<img class="row-two-img" src="../assets/tree/purple.png">
-			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
-		</div><div class="row-two-node">
+		</div>
+		<div class="row-two-node" @click="handleClick" >
 			<img class="row-two-img" src="../assets/tree/purple.png">
 			<img class="row-two-img-text" src='../assets/tree/purple_text.png'>
 		</div>
@@ -115,7 +120,18 @@
 
 <script>
 export default {
-
+	methods:{
+		handleClick(ev){
+			const hoverImg = this.$refs.hoverImgRef;
+			if (hoverImg.style.display == 'block') {
+				hoverImg.style.display = 'none'
+			} else {
+				hoverImg.style.display = 'block';
+				hoverImg.style.top = ev.pageY + 20 + "px";
+				hoverImg.style.left = ev.pageX + "px";
+			}
+		}
+	}
 }
 </script>
 
@@ -301,5 +317,10 @@ export default {
 .horizontal-conncetor-three{
 	border-bottom: 1px gray solid;
 	width: 200px;
+}
+
+.hover-img-container{
+	position: absolute;
+	display: none;
 }
 </style>
